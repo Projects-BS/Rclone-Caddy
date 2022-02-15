@@ -1,0 +1,40 @@
+{
+  "name": "Rclone-Caddy",
+  "description": "Caddy + Rclone",
+  "repository": "https://github.com/Projects-BS/Rclone-Caddy",
+  "keywords": ["docker", "rclone", "caddy"],
+  "stack": "container",
+  "success_url": "/",
+  "env": {
+    "ENABLE_AUTH": {
+      "description": "This value must be heroku when running in Heroku",
+      "value": "heroku",
+      "required": false
+    },
+    "RCLONE_CONFIG_BASE64": {
+      "description": "This value is the base64 string of your preconfigured /app/conf/rclone.conf content",
+      "value": "",
+      "required": false
+    },
+    "USERNAME": {
+      "description": "Username to login to AriaNg",
+      "value": "user",
+      "required": false
+    },
+    "PASSWORD": {
+      "description": "Password to login to AriaNg",
+      "value": "password",
+      "required": false
+    },
+    "PUID": {
+      "description": "The Linux user's ID that to run the app",
+      "value": "0",
+      "required": false
+    },
+    "PGID": {
+      "description": "The Linux group's ID that to run the app",
+      "value": "0",
+      "required": false
+    }
+  }
+}
