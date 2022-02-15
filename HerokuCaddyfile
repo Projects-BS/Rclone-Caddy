@@ -13,7 +13,7 @@ basicauth / {
 redir /ui / 301
 redir /ui/ / 301
 
-reverse_proxy /jsonrpc 127.0.0.1:5572
+reverse_proxy 127.0.0.1:5572
 
 encode gzip
 log {
