@@ -33,7 +33,6 @@ ENV XDG_CONFIG_HOME=/app/.caddy/config
 ENV RCLONE_CONFIG_BASE64=""
 
 ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
-ADD conf /app/conf
 ADD Caddyfile HerokuCaddyfile /usr/local/caddy/
 
 COPY --from=build-forego /app/forego/forego /app
