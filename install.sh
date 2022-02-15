@@ -42,7 +42,7 @@ adduser -D -u 1000 lextered \
   && unzip ${rclone_file} \
   && cd rclone-* \
   && cp rclone /usr/local/bin/ \
-  && chown junv:junv /usr/local/bin/rclone \
+  && chown lextered:lextered /usr/local/bin/rclone \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
