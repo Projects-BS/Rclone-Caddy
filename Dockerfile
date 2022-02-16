@@ -34,7 +34,7 @@ ENV RCLONE_CONFIG_BASE64=""
 
 RUN mkdir /app/conf/
 
-ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
+ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh Selector /app/
 ADD Caddyfile HerokuCaddyfile /usr/local/caddy/
 
 COPY --from=build-forego /app/forego/forego /app
