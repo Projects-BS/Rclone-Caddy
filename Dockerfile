@@ -68,7 +68,7 @@ RUN mkdir /app/Selector/
 
 ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
 ADD Selector/index.html Selector/upload.js Selector/process.php /app/Selector/
-ADD Caddyfile HerokuCaddyfile /usr/local/caddy/
+ADD HerokuCaddyfile /usr/local/caddy/
 
 COPY --from=build-forego /app/forego/forego /app
 
