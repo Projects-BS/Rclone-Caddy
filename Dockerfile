@@ -43,7 +43,7 @@ RUN node -v
 RUN npm -v
 RUN php -v
 
-FROM alpine:edge
+#FROM alpine:edge
 
 LABEL AUTHOR=Junv<wahyd4@gmail.com>
 
