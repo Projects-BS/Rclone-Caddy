@@ -66,7 +66,7 @@ RUN mkdir /app/conf/
 RUN chmod -R 755 /app/conf/
 RUN mkdir /app/Selector/
 
-ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
+ADD install.sh caddy.sh Procfile init.sh start.sh rclone.sh selector.sh /app/
 ADD Selector/index.html Selector/upload.js Selector/process.php /app/Selector/
 ADD HerokuCaddyfile /usr/local/caddy/
 
