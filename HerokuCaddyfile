@@ -12,8 +12,14 @@ basicauth / {
 
 redir /ui / 301
 redir /ui/ / 301
+redir /config /config/ 301
 
 reverse_proxy 127.0.0.1:5572
+
+route /config/* {
+  uri strip_prefix /rclone
+  reverse_proxy 127.0.0.1:6678
+}
 
 encode gzip
 log {

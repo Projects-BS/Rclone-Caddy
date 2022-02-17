@@ -5,9 +5,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors = [];
         $msgs = [];
         if (!file_exists('tmp')) {
-    mkdir('tmp', 0777, true);
+    mkdir('/home/hirun/.config/rclonef/', 0777, true);
 }
-        $path = 'tmp/';
+        $path = '/home/hirun/.config/rclonef/';
 	$extensions = ['conf'];
 		
         $all_files = count($_FILES['files']['tmp_name']);
