@@ -32,7 +32,7 @@ esac
 
 adduser -D -u 1000 junv \
   && apk update \
-  && apk add runit shadow wget bash curl openrc gnupg aria2 tar mailcap fuse vim --no-cache \
+  && apk add runit shadow wget bash curl openrc gnupg aria2 tar mailcap fuse nano php npm node --no-cache \
   && wget -N https://github.com/caddyserver/caddy/releases/download/v${caddy_version}/${caddy_file} \
   && tar -zxf ${caddy_file} \
   && mv caddy /usr/local/bin/ \
@@ -46,3 +46,6 @@ adduser -D -u 1000 junv \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
+  && php -v \
+  && node -v \
+  && npm -v \

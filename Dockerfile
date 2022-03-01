@@ -13,36 +13,6 @@ RUN git clone https://github.com/wahyd4/forego.git \
     && go build -o forego \
     && chmod +x forego
 
-#FROM ubuntu:20.04 as Selector-setup
-#
-# - Setting up tzdata configuration
-#ENV TZ=Europe/Kiev
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-#
-#WORKDIR /app
-#
-# - Configuring Environment
-#RUN echo "LC_ALL=en_US.UTF-8" >> /etc/environment
-#RUN echo "LANG=en_US.UTF-8" >> /etc/environment
-#RUN echo "NODE_ENV=development" >> /etc/environment
-#RUN more "/etc/environment"
-#
-#RUN apt-get update
-#RUN apt-get install curl htop git zip nano ncdu build-essential chrpath libssl-dev libxft-dev pkg-config glib2.0-dev libexpat1-dev gobject-introspection python-gi-dev apt-transport-https libgirepository1.0-dev libtiff5-dev libjpeg-turbo8-dev libgsf-1-dev fail2ban nginx -y
-#
-# - Installing php
-#RUN apt-get install --yes software-properties-common
-#RUN add-apt-repository ppa:ondrej/php
-#RUN apt -y install php7.4
-#
-# - Installing node
-#RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
-#RUN apt-get install --yes nodejs
-#
-#RUN node -v
-#RUN npm -v
-#RUN php -v
-
 FROM alpine:edge
 
 LABEL AUTHOR=Junv<wahyd4@gmail.com>
