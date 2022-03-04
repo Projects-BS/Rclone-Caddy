@@ -31,6 +31,7 @@ ENV RCLONE_CONFIG=/app/conf/rclone.conf
 ENV XDG_DATA_HOME=/app/.caddy/data
 ENV XDG_CONFIG_HOME=/app/.caddy/config
 ENV RCLONE_CONFIG_BASE64=""
+ENV TIMEZONE=Asia/Jakarta
 
 RUN mkdir /app/conf/
 RUN chmod -R 755 /app/conf/
