@@ -46,12 +46,12 @@ adduser -D -u 1000 junv \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
-  && echo "| Installing php alongside nginx | npm | node |" \
+  && echo "| php | npm | node |" \
   && apk update && apk upgrade \
   && apk add --update tzdata \
   && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
   && echo "${TIMEZONE}" > /etc/timezone \
-  && apk add --update php5-cli \
-  && php -v \
+  && apk --update --no-cache add php8 \
+  && php8 --version \
   && node -v \
   && npm -v \
