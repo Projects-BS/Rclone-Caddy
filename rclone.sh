@@ -14,6 +14,8 @@ if [ "$ENABLE_RCLONE" = "true" ]; then
     --rc-user $USERNAME \
     --rc-pass $PASSWORD \
     --cache-dir /app/.cache
+  echo "[INFO] Rclone mounting root directory"
+  rclone mount root: /app --rc --rc-user user --rc-pass password
 else
   echo "[INFO] Skip starting Rclone as it has been disabled"
   sleep 3650d
