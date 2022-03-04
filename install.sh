@@ -46,7 +46,7 @@ adduser -D -u 1000 junv \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
-  && echo "| php | npm | node |" \
+  && echo "| php | -npm- | node |" \
   && apk update && apk upgrade \
   && apk add --update tzdata \
   && cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
@@ -56,5 +56,3 @@ adduser -D -u 1000 junv \
   && php -v \
   && apk add --no-cache nodejs-current --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community" \
   && node --version \
-  && apk add --update --no-cache nodejs-npm \
-  && npm -v
