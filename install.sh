@@ -56,3 +56,5 @@ adduser -D -u 1000 junv \
   && php -v \
   && apk add --no-cache nodejs-current --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community" \
   && node --version \
+  && apk add --update --no-cache nodejs-npm \
+  && npm -v
