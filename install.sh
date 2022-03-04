@@ -32,7 +32,7 @@ esac
 
 adduser -D -u 1000 junv \
   && apk update \
-  && apk add runit shadow wget bash curl openrc gnupg aria2 tar mailcap fuse nano npm nodejs nginx --no-cache \
+  && apk add runit shadow wget bash curl openrc gnupg aria2 tar mailcap fuse nano nginx --no-cache \
   && wget -N https://github.com/caddyserver/caddy/releases/download/v${caddy_version}/${caddy_file} \
   && tar -zxf ${caddy_file} \
   && mv caddy /usr/local/bin/ \
@@ -54,5 +54,6 @@ adduser -D -u 1000 junv \
   && apk --update --no-cache add php8 \
   && php8 --version \
   && php -v \
+  && apk add --update nodejs npm \
   && node -v \
   && npm -v \
