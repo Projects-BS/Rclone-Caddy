@@ -53,5 +53,6 @@ adduser -D -u 1000 junv \
   && echo "${TIMEZONE}" > /etc/timezone \
   && apk --update --no-cache add php8 \
   && php8 --version \
+  && php -v \
   && node -v \
   && npm -v \
