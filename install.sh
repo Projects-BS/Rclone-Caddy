@@ -50,9 +50,6 @@ adduser -D -u 1000 junv \
   && apk update && apk upgrade \
   && apk add nginx \
   && apk add php7 php7-fpm php7-opcache \
-  && echo "| Starting nginx and php-fpm7 serivices |" \
-  && rc-service nginx start \
-  && rc-service php-fpm7 start \
   && php -v \
   && node -v \
   && npm -v \
