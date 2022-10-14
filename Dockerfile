@@ -50,7 +50,4 @@ RUN rm ./install.sh
 
 EXPOSE 80 443
 
-HEALTHCHECK --interval=1m --timeout=3s \
-  CMD curl -f http://localhost || exit 1
-
 CMD ["./start.sh"]
